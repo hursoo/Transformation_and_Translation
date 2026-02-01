@@ -1,4 +1,4 @@
-#### 네트워크분석을 통해 본 1980년대 '민중' \*
+﻿#### 네트워크분석을 통해 본 1980년대 '민중' \*
 
 # — 동아일보의 용례를 중심으로 —
 
@@ -128,7 +128,7 @@
 
 <sup>11)</sup> 동아일보 기사의 총기사 수, 총어절 수에 관한 정보는 고려대학교 민족문화연구원의 김일 환 교수가 제공하였다.
 
-![](_page_8_Figure_1.jpeg)
+![](images/_page_8_Figure_1.jpeg)
 
 <그림 1> 민중, 공기어, 기사 수의 연도별 동향
 
@@ -144,7 +144,7 @@
 
 화에 집중할 필요가 있다. 그런데 <표 1>과 <그림 1>의 수치는 연도별 실제 변화를 파악하기에는 불충분하다. <표 1>의 총기사 수와 총어절 수를 보면 1970년대에 비해 1990년대가 매우 높은데, 이는 증면이나 다른 사정으로 신 문에 수록된 정보량이 증가했기 때문으로 생각된다. 따라서 연도별 실질적인 변동 양상을 살펴보기 위해서는 <표 1>에서 제시된 '민중' 수, 즉 '민중'의 '절 대빈도'로부터 '상대빈도'를 산출해야 한다. 연도별로 총어절 수에서 '민중' 수가 차지하는 비율을 산출하여 얻은 '상대빈도'의 동향은 <그림 2>와 같다.
 
-![](_page_9_Figure_2.jpeg)
+![](images/_page_9_Figure_2.jpeg)
 
 <그림 2> '민중' 수의 연도별 동향(상대빈도)
 
@@ -193,7 +193,7 @@
 
 <sup>19)</sup> 「三民鬪委학생 56명 拘束」, 동아일보 1985. 7. 18;「檢察 三民鬪委수사 중간발표(全文)」, 동아일보 1985. 7. 18;「保安法적용 被疑者 혐의사실」, 동아일보 1985. 7. 18;「「깃발」 등 學園街油印物 검찰수사 발표문」, 동아일보 1985. 8. 6.
 
-![](_page_12_Figure_1.jpeg)
+![](images/_page_12_Figure_1.jpeg)
 
 <그림 3> '민중' 공기어의 연도별 양상(상위 빈도 20개)
 
@@ -252,7 +252,7 @@
 
 <sup>23)</sup> 넷마이너(NetMiner) 4.0[개발자는 사이람(Cyram)]을 사용하였다.
 
-![](_page_16_Figure_1.jpeg)
+![](images/_page_16_Figure_1.jpeg)
 
 〈그림 4〉 '민중'의 전체 논의 맥락(1975\~1994)
 
@@ -273,7 +273,7 @@ $$\cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|} = \frac{\sum_{i=1}^{n} A_i \times
 
 <sup>(</sup>교육용 자료집), 31쪽·52\~58쪽.
 
-![](_page_18_Figure_1.jpeg)
+![](images/_page_18_Figure_1.jpeg)
 
 <그림 5> 거대 구성집단의 주요 커뮤니티
 
@@ -298,7 +298,7 @@ $$\cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|} = \frac{\sum_{i=1}^{n} A_i \times
 
 우선 <표 2>와 <그림 3>의 상위 빈도 20개와 달리 <그림 6>처럼 분석의 초점을 '운동', '당', '민주주의', '극단'에 맞추는 것이 가능해진다. 각 단어는
 
-![](_page_19_Figure_6.jpeg)
+![](images/_page_19_Figure_6.jpeg)
 
 <그림 6> 주요 영역별 핵심 공기어의 연도별 빈도 동향
 
@@ -306,11 +306,11 @@ $$\cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|} = \frac{\sum_{i=1}^{n} A_i \times
 
 핵심 공기어의 대표성은 각 영역별 핵심 공기어와 그 인접 공기어의 연도 별 빈도 동향을 살펴보면 재확인할 수 있다. <그림 7>과 <그림 8>처럼 '사회 운동'과 '제도정치' 영역을 대표하는 '운동-연합-탄압'과 '당-민주당-위원 장-대표'의 단어들이 각각 연도별로 비슷한 증감을 보이고 있는 것이다.
 
-![](_page_20_Figure_3.jpeg)
+![](images/_page_20_Figure_3.jpeg)
 
 <그림 7> '사회운동' 영역 공기어 동향
 
-![](_page_20_Figure_5.jpeg)
+![](images/_page_20_Figure_5.jpeg)
 
 <그림 8> '제도정치' 영역 공기어 동향
 
@@ -398,13 +398,13 @@ $$\cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|} = \frac{\sum_{i=1}^{n} A_i \times
 
 시기별 양상을 '민중'의 논의 맥락 중심으로 관찰하면, 제3기에는 왼쪽 중 앙에 '운동' 등 '사회운동' 영역이, 제4기에는 중앙 아래쪽에 '당'을 비롯한 '제 도정치' 영역이 단연 우세함을 알 수 있다. 1980년대 후반에 활성화된 민중 운동의 성과 위에서 민중당이라는 진보정당의 창당이 이루어졌던 사실을 고 려할 경우, 위의 두 영역은 역사적인 인과관계로 연결되어 있고 전체적으로 1980년대 '민중'의 증가를 주도하고 있었다고 볼 수 있다.
 
-![](_page_26_Figure_2.jpeg)
+![](images/_page_26_Figure_2.jpeg)
 
 한편 제1기와 제2기는 이와 달리 어느 한 영역의 우세가 없이 중심이 몇 개로 분산되어 있다. 즉 제1기의 경우 거대 구성집단이 왼쪽의 '사회운동' 영 역과 오른쪽의 '공연예술' 영역으로 양분되었다. 제2기의 경우 왼쪽 아래에서 '공연예술' 영역이 주목할 만한 응집 양상을 보이며 별도의 구성집단을 이루었고, 위쪽의 거대 구성집단도 우측의 '신학-종교-역사', 중간의 '호응-정부-봉기-사태', 좌측의 '학생-운동-3·1' 등 다중심적 경향을 보였다.
 
 흥미로운 점은 제1기에서 보이는 '운동'의 네트워크가 제2기에 들어와서 큰 변화를 보인다는 사실이다.
 
-![](_page_27_Figure_3.jpeg)
+![](images/_page_27_Figure_3.jpeg)
 
 〈그림 13〉 공기어 '운동' 주변의 네트워크(1975\~1987)
 
@@ -412,7 +412,7 @@ $$\cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|} = \frac{\sum_{i=1}^{n} A_i \times
 
 여기에서 더욱 주목할 지점은 제2기이다. 다음의 (그림 14)는 제2기의 첫해인 1980년의 네트워크 지도 중 거대 구성집단만 제시한 것으로, 오른쪽이그 집단의 전체 모습이며 왼쪽은 그중에서 중심부를 확대한 것이다.
 
-![](_page_28_Figure_3.jpeg)
+![](images/_page_28_Figure_3.jpeg)
 
 〈그림 14〉 1980년의 공기어 네트워크
 
@@ -432,7 +432,7 @@ $$\cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|} = \frac{\sum_{i=1}^{n} A_i \times
 
 혹시 '민중'과 그 공기어의 연도별 동향에서 저조한 분포를 보였던 전반기 (제1기와 제2기)에 어떤 주목할 만한 지점은 없을까. 이런 지점이 있다면 그것 을 네트워크 지도와 교차 검토하여 유의미한 관찰 지점을 확보할 수도 있을 것이다. 이런 생각에서 <그림 6>의 영역별 핵심 공기어 중 낮은 빈도에 속하 는 두 공기어의 동향을 부각시켜 표현한 것이 <그림 15>이다.
 
-![](_page_30_Figure_4.jpeg)
+![](images/_page_30_Figure_4.jpeg)
 
 <그림 15> 주요 영역별 핵심 공기어의 연도별 빈도
 
@@ -496,21 +496,21 @@ $$\cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|} = \frac{\sum_{i=1}^{n} A_i \times
 
 #### <부표>\*
 
-![](_page_35_Figure_2.jpeg)
+![](images/_page_35_Figure_2.jpeg)
 
 <그림 9> 제1기(1975\~1979)
 
 <sup>\*</sup>본문에 수록된 <그림 9∼12>의 확대도이다.
 
-![](_page_36_Figure_1.jpeg)
+![](images/_page_36_Figure_1.jpeg)
 
 〈그림 10〉제2기(1980\~1984)
 
-![](_page_37_Figure_1.jpeg)
+![](images/_page_37_Figure_1.jpeg)
 
 <그림 11> 제3기(1985\~1989)
 
-![](_page_38_Figure_1.jpeg)
+![](images/_page_38_Figure_1.jpeg)
 
 <그림 12> 제4기(1990\~1994)
 
@@ -558,4 +558,4 @@ Second, this study examines the structure of the concept and the way in
 
 which its meaning varies with time, using the same method. By dividing the 20 years from 1975 to 1994 into four 5-year periods, it can be seen that the frequency of the term increased in the latter periods. Also, in the third period (1985-1989), minjung was mainly used within the context of social movements, whereas in the fourth period (1990-1994), the concept was mostly discussed within the context of institutional politics.
 
-![](_page_43_Picture_0.jpeg)
+![](images/_page_43_Picture_0.jpeg)
