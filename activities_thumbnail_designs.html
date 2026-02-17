@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activities 썸네일 디자인 비교</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    background: #1a1a1a;
+    font-family: 'Gowun Batang', serif;
+    padding: 40px 20px;
+    color: #F5E6D3;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #F5E6D3;
+    letter-spacing: 2px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 50px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  .card-wrapper {
+    text-align: center;
+  }
+  
+  .card-label {
+    font-size: 18px;
+    color: #F5E6D3;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+  }
+  
+  .card-desc {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  /* ===== 공통 카드 ===== */
+  .thumbnail {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .thumb-category {
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .thumb-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+    max-width: 85%;
+  }
+
+  .thumb-info {
+    font-size: 14px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ===== 1. 학술발표 (기존) ===== */
+  .thumb-academic {
+    background: #3C2415;
+    color: #F5E6D3;
+  }
+  
+  .thumb-academic .inner-frame {
+    position: absolute;
+    top: 20px; right: 20px; bottom: 20px; left: 20px;
+    background: rgba(245, 230, 211, 0.08);
+    border-radius: 2px;
+    z-index: 1;
+  }
+
+  /* ===== 2. 강연·강의 ===== */
+  .thumb-lecture {
+    background: #1B2A4A;
+    color: #D4DFE8;
+  }
+  
+  .thumb-lecture::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(180, 200, 220, 0.6), transparent);
+  }
+  
+  .thumb-lecture::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(180, 200, 220, 0.6), transparent);
+  }
+  
+  .thumb-lecture .side-line-left {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, rgba(180, 200, 220, 0.6), transparent);
+  }
+  
+  .thumb-lecture .side-line-right {
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, rgba(180, 200, 220, 0.6), transparent);
+  }
+
+  .thumb-lecture .divider {
+    width: 60px;
+    height: 1px;
+    background: rgba(180, 200, 220, 0.5);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .thumb-lecture .divider-top {
+    margin-bottom: 25px;
+  }
+  
+  .thumb-lecture .divider-bottom {
+    margin-top: 25px;
+  }
+
+  .thumb-lecture .thumb-category {
+    color: #8AAEC4;
+    font-size: 14px;
+  }
+
+  /* ===== 3. 워크숍·세미나 ===== */
+  .thumb-workshop {
+    background: #2C3325;
+    color: #D8DFD0;
+  }
+  
+  .thumb-workshop .corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+  }
+  
+  .thumb-workshop .corner-tl {
+    top: 18px; left: 18px;
+    border-top: 2px solid rgba(216, 223, 208, 0.4);
+    border-left: 2px solid rgba(216, 223, 208, 0.4);
+  }
+  
+  .thumb-workshop .corner-tr {
+    top: 18px; right: 18px;
+    border-top: 2px solid rgba(216, 223, 208, 0.4);
+    border-right: 2px solid rgba(216, 223, 208, 0.4);
+  }
+  
+  .thumb-workshop .corner-bl {
+    bottom: 18px; left: 18px;
+    border-bottom: 2px solid rgba(216, 223, 208, 0.4);
+    border-left: 2px solid rgba(216, 223, 208, 0.4);
+  }
+  
+  .thumb-workshop .corner-br {
+    bottom: 18px; right: 18px;
+    border-bottom: 2px solid rgba(216, 223, 208, 0.4);
+    border-right: 2px solid rgba(216, 223, 208, 0.4);
+  }
+
+  .thumb-workshop .thumb-category {
+    color: #A3B596;
+    font-size: 14px;
+  }
+
+  /* ===== 색상 변형 예시 ===== */
+  .color-swatches {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    position: relative;
+  }
+  
+  .swatch-label {
+    font-size: 10px;
+    color: #666;
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  .swatch-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ===== 하단 요약 테이블 ===== */
+  .summary {
+    max-width: 900px;
+    margin: 60px auto 0;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .summary th, .summary td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+  }
+  
+  .summary th {
+    color: #999;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
+  
+  .summary td {
+    color: #ddd;
+  }
+  
+  .color-dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<h1>ACTIVITIES 썸네일 디자인 체계</h1>
+<p class="subtitle">범주별 차별화 디자인 + 범주 내 색상 변형 가이드</p>
+
+<div class="grid">
+
+  <!-- 학술발표 -->
+  <div class="card-wrapper">
+    <div class="card-label">학 술 발 표</div>
+    <div class="card-desc">기존 디자인 · 다크 브라운 · 사각형 액자 프레임</div>
+    <div class="thumbnail thumb-academic">
+      <div class="inner-frame"></div>
+      <div class="thumb-category">학술발표</div>
+      <div class="thumb-title">현상즉실재론의 전유와<br>한국적 세계관의 모색</div>
+      <div class="thumb-info">2026.2.11(수). 서울대학교 14동 502호</div>
+    </div>
+    <div class="color-swatches">
+      <div class="swatch-group">
+        <div class="swatch" style="background:#3C2415;"></div>
+        <span class="swatch-label">기본</span>
+      </div>
+      <div class="swatch-group">
+        <div class="swatch" style="background:#4A3020;"></div>
+        <span class="swatch-label">밝게</span>
+      </div>
+      <div class="swatch-group">
+        <div class="swatch" style="background:#2E1A0E;"></div>
+        <span class="swatch-label">어둡게</span>
+      </div>
+      <div class="swatch-group">
+        <div class="swatch" style="background:#45301E;"></div>
+        <span class="swatch-label">따뜻하게</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 강연·강의 -->
+  <div class="card-wrapper">
+    <div class="card-label">강 연 · 강 의</div>
+    <div class="card-desc">신규 제안 · 딥 네이비 · 빛줄기 라인 장식</div>
+    <div class="thumbnail thumb-lecture">
+      <div class="side-line-left"></div>
+      <div class="side-line-right"></div>
+      <div class="thumb-category">강연</div>
+      <div class="divider divider-top"></div>
+      <div class="thumb-title">디지털 인문학의 현재와<br>역사학의 미래</div>
+      <div class="divider divider-bottom"></div>
+      <div class="thumb-info">2026.3.15(토). 고려대학교 백주년기념관</div>
+    </div>
+    <div class="color-swatches">
+      <div class="swatch-group">
+        <div class="swatch" style="background:#1B2A4A;"></div>
+        <span class="swatch-label">기본</span>
+      </div>
+      <div class="swatch-group">
+        <div class="swatch" style="background:#243658;"></div>
+        <span class="swatch-label">밝게</span>
+      </div>
+      <div class="swatch-group">
+        <div class="swatch" style="background:#131E38;"></div>
+        <span class="swatch-label">어둡게</span>
+      </div>
+      <div class="swatch-group">
+        <div class="swatch" style="background:#1E2E50;"></div>
+        <span class="swatch-label">차갑게</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 워크숍·세미나 -->
+  <div class="card-wrapper">
+    <div class="card-label">워 크 숍 · 세 미 나</div>
+    <div class="card-desc">신규 제안 · 딥 올리브 · 코너 프레임 장식</div>
+    <div class="thumbnail thumb-workshop">
+      <div class="corner corner-tl"></div>
+      <div class="corner corner-tr"></div>
+      <div class="corner corner-bl"></div>
+      <div class="corner corner-br"></div>
+      <div class="thumb-category">워크숍</div>
+      <div class="thumb-title">n8n과 AI를 활용한<br>역사 자료 자동화 워크숍</div>
+      <div class="thumb-info">2026.4.20(일). 서울대학교 중앙도서관</div>
+    </div>
+    <div class="color-swatches">
+      <div class="swatch-group">
+        <div class="swatch" style="background:#2C3325;"></div>
+        <span class="swatch-label">기본</span>
+      </div>
+      <div class="swatch-group">
+        <div class="swatch" style="background:#374030;"></div>
+        <span class="swatch-label">밝게</span>
+      </div>
+      <div class="swatch-group">
+        <div class="swatch" style="background:#1F261A;"></div>
+        <span class="swatch-label">어둡게</span>
+      </div>
+      <div class="swatch-group">
+        <div class="swatch" style="background:#303828;"></div>
+        <span class="swatch-label">따뜻하게</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 요약 테이블 -->
+<table class="summary">
+  <tr>
+    <th>범주</th>
+    <th>배경색 (기본)</th>
+    <th>텍스트 색</th>
+    <th>장식 요소</th>
+    <th>분위기</th>
+  </tr>
+  <tr>
+    <td>학술발표</td>
+    <td><span class="color-dot" style="background:#3C2415;"></span>#3C2415 다크 브라운</td>
+    <td>#F5E6D3</td>
+    <td>사각형 반투명 액자</td>
+    <td>고전적, 학구적</td>
+  </tr>
+  <tr>
+    <td>강연·강의</td>
+    <td><span class="color-dot" style="background:#1B2A4A;"></span>#1B2A4A 딥 네이비</td>
+    <td>#D4DFE8</td>
+    <td>빛줄기 라인 + 가로 구분선</td>
+    <td>지적, 명료한</td>
+  </tr>
+  <tr>
+    <td>워크숍·세미나</td>
+    <td><span class="color-dot" style="background:#2C3325;"></span>#2C3325 딥 올리브</td>
+    <td>#D8DFD0</td>
+    <td>코너 프레임 (ㄱ자)</td>
+    <td>실용적, 자연스러운</td>
+  </tr>
+</table>
+
+</body>
+</html>
